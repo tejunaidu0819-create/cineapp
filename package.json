@@ -3,13 +3,18 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "node server/index.js",
     "client": "vite",
     "build": "vite build",
+    "vercel-build": "vite build",
     "preview": "vite preview",
-    "migrate": "node server/db/neon-migrator.js"
+    "migrate": "node server/db/neon-migrator.js",
+    "test": "node test-qa-agent3.js"
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.10.4",
